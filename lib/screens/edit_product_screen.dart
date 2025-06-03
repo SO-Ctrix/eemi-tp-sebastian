@@ -347,57 +347,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                   ),
                                 ],
                               ),
-                              
-                              const SizedBox(height: 32),
-                              
-                              // Section des statistiques
-                              Container(
-                                padding: const EdgeInsets.all(16),
-                                decoration: BoxDecoration(
-                                  color: Colors.grey[100],
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const Text(
-                                      'Statistiques du produit',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    const SizedBox(height: 12),
-                                    Row(
-                                      children: [
-                                        Expanded(
-                                          child: _buildStatItem(
-                                            icon: Icons.visibility_outlined,
-                                            value: '512',
-                                            label: 'Vues',
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: _buildStatItem(
-                                            icon: Icons.favorite_outline,
-                                            value: '32',
-                                            label: 'Favoris',
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: _buildStatItem(
-                                            icon: Icons.shopping_cart_outlined,
-                                            value: '8',
-                                            label: 'Ventes',
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              
-                              const SizedBox(height: 32),
+                                const SizedBox(height: 32),
                               
                               ElevatedButton.icon(
                                 onPressed: _submitForm,
@@ -430,33 +380,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 ),
     );
   }
-
-  Widget _buildStatItem({
-    required IconData icon,
-    required String value,
-    required String label,
-  }) {
-    return Column(
-      children: [
-        Icon(icon, color: const Color(0xFF24969A)),
-        const SizedBox(height: 8),
-        Text(
-          value,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        Text(
-          label,
-          style: TextStyle(
-            fontSize: 14,
-            color: Colors.grey[600],
-          ),
-        ),
-      ],
-    );
-  }
+  // Méthode _buildStatItem supprimée car non utilisée
 
   void _showDeleteConfirmation(BuildContext context, Product product) {
     showDialog(
